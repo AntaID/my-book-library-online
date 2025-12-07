@@ -16,10 +16,13 @@ public class BookController {
         String pengarangInput = input.nextLine();
         book.setPengarang(pengarangInput);
 
-        System.out.print("Masukan Tahun Terbit: ");
-        int tahunTerbitInput = Integer.parseInt(input.nextLine());
-        book.setTahunTerbit(tahunTerbitInput);
-
+        try {
+            System.out.print("Masukan Tahun Terbit: ");
+            int tahunTerbitInput = Integer.parseInt(input.nextLine());
+            book.setTahunTerbit(tahunTerbitInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Input salah! Harus berupa angka.");
+        }
         return book;
     }
 }

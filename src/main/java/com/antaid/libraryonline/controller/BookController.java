@@ -8,11 +8,17 @@ public class BookController {
         Scanner input = new Scanner(System.in);
         Book book = new Book();
 
-        System.out.println("Masukan Judul Buku: ");
+        System.out.print("Masukan Judul Buku: ");
         String judulInput = input.nextLine();
         book.setJudul(judulInput);
 
-        System.out.println("Masukan Pengarang: ");
+        System.out.print("Masukan Pengarang: ");
+        String pengarangInput = input.nextLine();
+        book.setPengarang(pengarangInput);
+
+        System.out.print("Masukan Tahun Terbit: ");
+        int tahunTerbitInput = Integer.parseInt(input.nextLine());
+        book.setTahunTerbit(tahunTerbitInput);
 
         return book;
     }

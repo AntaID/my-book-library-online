@@ -2,6 +2,7 @@ package com.antaid.libraryonline;
 
 import com.antaid.libraryonline.model.Book;
 import com.antaid.libraryonline.service.BookService;
+import com.antaid.libraryonline.controller.BookController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +12,12 @@ public class MainApp {
 
         List<Book> rakBuku = new ArrayList<>();
 
-        Book b1 = new Book();
-        b1.setJudul("Pemrograman Java");
-        b1.setPengarang("Andi Susanto");
+        BookController controller = new BookController();
 
-        Book b2 = new Book();
-        b2.setJudul("Belajar Struktur Data");
-        b2.setPengarang("Rangga Wirangga");
+        System.out.println("=== PENDAFTARAN BUKU BARU ===");
 
-        rakBuku.add(b1);
-        rakBuku.add(b2);
+        Book bukuBaru = controller.createBook();
+        rakBuku.add(bukuBaru);
 
         BookService service = new BookService();
 

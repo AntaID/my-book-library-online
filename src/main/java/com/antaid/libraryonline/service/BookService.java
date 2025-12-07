@@ -8,5 +8,6 @@ public class BookService {
 
         System.out.println("Judul Buku: " + book.getJudul());
         System.out.println("Pengarang: " + book.getPengarang());
+        System.out.println("Tahun Terbit: " + book.getTahunTerbit());
     }
 }

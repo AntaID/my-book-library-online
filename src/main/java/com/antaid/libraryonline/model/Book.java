@@ -3,6 +3,7 @@ package com.antaid.libraryonline.model;
 public class Book {
     private String judul;
     private String pengarang;
+    private int tahunTerbit;
 
     public String getJudul() {
         return judul;
@@ -18,5 +19,12 @@ public class Book {
 
     public void setPengarang(String pengarang) {
         this.pengarang = pengarang;
+    }
+
+    public int getTahunTerbit() {
+        return tahunTerbit;
+    }
+    public void setTahunTerbit(int tahunTerbit) {
+        this.tahunTerbit = tahunTerbit;
     }
 }
